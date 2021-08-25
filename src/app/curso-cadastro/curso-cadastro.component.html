@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col">
+        <label for="cursoNomeInput">Nome do Curso</label>
+        <input type="text" class="form-control" id="cursoNomeInput" #cursoNomeInput>
+    </div>
+    
+    <div class="col">
+        <label for="cursoCargaInput">Carga Horária</label>
+        <input type="number" class="form-control" id="cursoCargaInput" #cursoCargaInput>
+    </div>
+</div>
+
+<div class="col-12 mt-2">
+    <button (click)="adicionarCurso(cursoNomeInput.value, cursoCargaInput.value)" class="btn btn-primary" type="button">
+        Cadastrar Curso
+    </button>
+</div>

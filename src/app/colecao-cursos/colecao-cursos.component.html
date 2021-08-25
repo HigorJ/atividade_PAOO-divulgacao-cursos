@@ -1,14 +1,11 @@
-<ul class="list-group">
-    <li class="list-group-item">
-      <app-cursos></app-cursos>
-    </li>
-    <li class="list-group-item">
-      <app-cursos></app-cursos>
-    </li>
-    <li class="list-group-item">
-      <app-cursos></app-cursos>
-    </li>
-    <li class="list-group-item">
-      <app-cursos></app-cursos>
-    </li>
-</ul>
+<div class="row">
+  <div class="col-4" *ngFor="let curso of cursos">
+    <app-cursos [curso]="curso"></app-cursos>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md text-center">
+    <app-curso-cadastro (adicionarCursoEvent)="onCursoAdicionado($event)"></app-curso-cadastro>
+  </div>
+</div>

@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./colecao-cursos.component.css']
 })
 export class ColecaoCursosComponent {
-
+  cursos = []
+  
+  onCursoAdicionado(curso) {
+    this.cursos = [...this.cursos, curso]
+  }
 }
 
 
